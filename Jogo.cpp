@@ -6,6 +6,18 @@
   const int screenWidth = 800;
   const int screenHeight = 600;
 
+Void movimentarJogador(){ 
+
+}
+
+Void movimentarBola(){ 
+
+}
+
+Void trocarNivel(){ 
+
+}
+
 int main() {
   InitWindow(screenWidth, screenHeight, "raylib basic window");
   SetTargetFPS(60);
