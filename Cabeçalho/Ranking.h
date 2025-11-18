@@ -4,6 +4,14 @@
 
 #include "Estruturas.h"
 
-struct atualizarRanking(Jogador *jogador)
+void iniciarRanking(Ranking *ranking, char *arquivo);
+
+void atualizarRanking(Ranking *ranking, Jogador *jogador);
+
+void desenharRanking(Ranking *ranking);
+
+void salvarRanking(Ranking *ranking);
+
+void carregarRanking(Ranking *ranking);
 
 #endif
