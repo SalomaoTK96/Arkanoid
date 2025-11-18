@@ -5,10 +5,10 @@
 #ifndef JOGADOR
 #define JOGADOR
 
-void atualizarPontuacao(Jogador *jogador, int blocosEliminados)
+void atualizarPontuacao(Jogador *jogador, int pontuacao);
 
-void atualizarTempo(Jogador *jogador, int tempoDecorrido)
+void atualizarTempo(Jogador *jogador);
 
-void atualizarVidas(Jogador *jogador, int vidasPerdidas)
+void atualizarVidas(Jogador *jogador);
 
 #endif
