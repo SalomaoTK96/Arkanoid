@@ -6,8 +6,8 @@
 #define MAX_LETRAS 10
 
 struct Posicao {
-    int x;
-    int y;
+    float x;
+    float y;
 };
 
 struct Retangulo2D {
@@ -24,9 +24,9 @@ struct Bloco {
 
 struct Bola {
     Posicao posicao;
-    int radium;
-    int velocidadex;
-    int velocidadey;
+    float radium;
+    float velocidadex;
+    float velocidadey;
     bool prendeu;
 };
 
@@ -45,7 +45,7 @@ struct Fase {
 struct ItensEspeciais {
     Posicao posicao_do_item;
     int tipo;
-    int velocidadey;
+    float velocidadey;
     bool esta_Ativo;
 };
 
