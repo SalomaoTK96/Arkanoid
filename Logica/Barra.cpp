@@ -1,5 +1,8 @@
 #include "Estruturas.h"
 #include "Barra.h"
+#include "raylib.h"
+
+#define VELOCIDADE 400
 
 void iniciarBarra(Barra *barra) {
 
@@ -9,6 +12,29 @@ void iniciarBarra(Barra *barra) {
     barra->retangulo.altura = 20;
     barra->velocidadex = 0;
 
+}
+void atualizarBarra(Barra *barra, float dt) {
+    
+    if (IsKeyDown(KEY_LEFT) || IsKeyDown (KEY_A)) {
+        barra->velocidadex = -VELOCIDADE;
+    } else if (IsKeyDown(KEY_RIGHT) || IsKeyDown (KEY_D)) {
+        barra->velocidadex = VELOCIDADE;
+    } else {
+        barra->velocidadex = 0.0;
+    }
+
+    barra->retangulo.posicao.x += barra->velocidadex * dt;
+
+    
+    if (barra->retangulo.posicao.x < 0) {
+        barra->retangulo.posicao.x = 0;
+    }
+    
+    if (barra->retangulo.posicao.x + barra->retangulo.largura > 800) {
+
+        barra->retangulo.posicao.x = 800 - barra->retangulo.largura;
+
+    } 
 }
 
 void atualizarTamanho(Barra *barra, int tamanhoAd, bool adicionar)
