@@ -9,7 +9,7 @@ void iniciarBarra(Barra *barra);
 
 void atualizarBarra(Barra *barra, int dt);
 
-void atualizarTamanho(Barra *barra, int tamanhoAd);
+void atualizarTamanho(Barra *barra, int tamanhoAd, bool adicionar);
 
 void desenharBarra(Barra *barra);
 
