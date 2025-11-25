@@ -59,7 +59,7 @@ struct Jogador {
 
 struct Ranking {
     Jogador jogador[MAX_JOGADORES];
-
-}
+    int total_jogadores;
+};
 
 #endif
