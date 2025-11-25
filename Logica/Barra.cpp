@@ -1,5 +1,6 @@
 #include "Estruturas.h"
 #include "Barra.h"
+#include "cores.h"
 #include "raylib.h"
 
 #define VELOCIDADE 400
@@ -29,7 +30,6 @@ void atualizarBarra(Barra *barra, float dt) {
     if (barra->retangulo.posicao.x < 0) {
         barra->retangulo.posicao.x = 0;
     }
-    
     if (barra->retangulo.posicao.x + barra->retangulo.largura > 800) {
 
         barra->retangulo.posicao.x = 800 - barra->retangulo.largura;
@@ -48,14 +48,15 @@ void atualizarTamanho(Barra *barra, int tamanhoAd, bool adicionar)
 
         barra->retangulo.largura -= tamanhoAd;
 
-    } //adicionar verificação se a barra está maior que a tela
+    } 
+
 
 }
 
 void desenharBarra(Barra *barra) {
 
     DrawRectangle((int)barra->retangulo.posicao.x, (int)barra->retangulo.posicao.y,
-                  (int)barra->retangulo.largura, (int)barra->retangulo.altura, WHITE);
+                  (int)barra->retangulo.largura, (int)barra->retangulo.altura, obterCorBarra());
 
     DrawRectangleLines ((int)barra->retangulo.posicao.x, (int)barra->retangulo.posicao.y,
                   (int)barra->retangulo.largura, (int)barra->retangulo.altura, BLACK);
